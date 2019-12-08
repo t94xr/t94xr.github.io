@@ -91,6 +91,15 @@ nav a {
   border: none;
   margin-left: 10px; }
 
+div.flexbox {
+  display: flex; }
+
+div.box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: left; }
+
 img {
   max-width: 100%; }
 
