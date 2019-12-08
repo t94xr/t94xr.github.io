@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* Display Fonts */
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://free.bboxtype.com/embedfonts/?family=FiraSans:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn:400,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,200,300,400,500,600,700&display=swap");
+/* Code Fonts */
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css");
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap&subset=latin-ext");
+/* Main CSS Code */
+html {
+  font-family: "Inter", Fira Sans, IBM Plex Sans, Work Sans, system-ui, sans-serif;
+  line-height: 1.90em;
+  font-size: calc(1em * 1.25);
+  color: #444444;
+  letter-spacing: -0.75px;
+  text-rendering: optimizeLegibility;
+  /* Open Digits */
+  font-feature-settings: 'ss01' 1;
+  /* Disambiguation */
+  font-feature-settings: 'ss02' 1;
+  /* Auto Fractions */
+  font-feature-settings: 'frac' 1;
+  /* Slashed Zero Digit */
+  font-feature-settings: 'zero' 1;
+  /* Upper-case i with Serif */
+  font-feature-settings: 'cv08' 1;
+  /* Flat top Three Digit */
+  font-feature-settings: 'cv09' 1;
+  /* Open Digits */
+  font-feature-settings: 'cv11' 1;
+  /* Stylistic Alternatives */
+  font-feature-settings: 'salt' 1; }
+
+body {
+  background-color: #F7F7F7;
+  padding-top: 50px; }
+
+main {
+  max-width: 1280px;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px 50px 25px 50px; }
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  display: flex; }
+
+header section.left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: left; }
+
+header section.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: right; }
+
+header h1 {
+  font-weight: 800;
+  font-size: 3em;
+  letter-spacing: -3px;
+  padding: 30px 0 0 0;
+  margin-bottom: 0;
+  border: none; }
+
+header h2 {
+  font-weight: 200;
+  font-size: 1.25em;
+  letter-spacing: -2.5px; }
+
+header p {
+  font-weight: 200;
+  font-size: 1em; }
+
+nav {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  padding-top: 20px; }
+
+nav a {
+  justify-content: space-around;
+  display: inline-flex;
+  border: none;
+  margin-left: 10px; }
+
+img {
+  max-width: 100%; }
+
+li {
+  padding-left: 10px; }
+
+a {
+  text-decoration: none;
+  color: #444444;
+  font-weight: 400;
+  display: inline-block;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 0;
+  line-height: 1em; }
+
+a:hover {
+  border-bottom: 3px solid #e74c3c; }
+
+h1 {
+  font-size: calc(1em * 2.25);
+  font-weight: 700;
+  letter-spacing: -2px;
+  padding: 20px 0px 10px 20px;
+  margin: 10px 0 20px 0;
+  border-left: 7px solid #e74c3c; }
+
+h2 {
+  font-size: calc(1em * 2.0);
+  font-weight: 600;
+  letter-spacing: -2px;
+  padding: 0;
+  margin: 30px 0 30px 0; }
+
+h3 {
+  font-size: calc(1em * 1.75);
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  padding-bottom: 0;
+  margin: 30px 0 30px 0; }
+
+h4 {
+  font-size: calc(1em * 1.5);
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  padding: 0;
+  margin: 30px 0 30px 0; }
+
+h5 {
+  font-size: calc(1em * 1.5);
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  padding: 0;
+  margin: 30px 0 30px 0; }
+
+h6 {
+  font-size: calc(1em * 1.25);
+  font-weight: 200;
+  letter-spacing: -1.5px;
+  padding: 0;
+  margin: 30px 0 30px 0; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+footer {
+  border-top: 1px gray solid;
+  margin-top: 50px;
+  font-size: small; }
+
+aside {
+  width: 40%;
+  padding-left: 1.25rem;
+  margin-left: 1.5rem;
+  float: right;
+  border-left: 8px solid #e74c3c;
+  color: #e74c3c;
+  font-weight: 300; }
+
+aside > p {
+  margin: .5rem; }
+
+blockquote {
+  font-size: 1em;
+  width: 85%;
+  margin: 50px auto;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #e74c3c;
+  line-height: 1.6;
+  position: relative;
+  background: #f5f5f5; }
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #e74c3c;
+  font-size: 5em;
+  position: absolute;
+  left: 10px;
+  top: -10px; }
+
+blockquote::after {
+  content: ''; }
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1em; }
+
+figure {
+  float: right;
+  width: 350px;
+  padding: 10px;
+  margin: 30px 0 30px 20px;
+  border: 1px solid #e74c3c; }
+
+figure img {
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
+
+figure figcaption {
+  padding-top: 10px;
+  font-size: small;
+  line-height: 1.5em;
+  font-weight: 300; }
+
+pre {
+  background-color: #282b2e;
+  padding: 25px;
+  color: white;
+  line-height: 1.5em;
+  font-size: 11pt;
+  overflow: auto;
+  letter-spacing: 0.5px; }
+
+pre, pre *, code {
+  font-family: "Space Mono", Hack, Fira Code, monospace; }
+
+samp {
+  letter-spacing: normal;
+  font-size: 11pt; }
+
+section.left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: left; }
+
+section.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: right; }
+
+time {
+  opacity: 0.6; }
+
+dl dt {
+  font-weight: 700; }
+
+dl dd {
+  font-weight: 300;
+  font-style: italic; }
+
+/* Add " (PDF)" text after links that go to PDFs */
+a[href$=".pdf"]:after {
+  content: " (PDF)" url("pdficon.png"); }
+
+/* If file size specified as data attribute, use that too */
+a[href$=".pdf"][data-size]:after {
+  content: " (PDF, " attr(data-size) ")" url("pdficon.png"); }
+
+address {
+  border-left: 8px solid #e74c3c;
+  padding: 0.5em 12.5px 0.5em 25px;
+  width: 85%;
+  margin: 20px; }
+
+kbd {
+  font-family: "Space Mono", Hack, Fira Code, monospace;
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.95em;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap; }
+
+q {
+  font-style: italic;
+  quotes: "“" "”"; }
+
+table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border: 2px solid #e74c3c;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+table td, table th {
+  border: 2px solid #e74c3c;
+  padding: 3px; }
+
+table thead {
+  background-color: #e74c3c;
+  color: #fff; }
+
+ul.specs span.specs {
+  width: 120px;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: right;
+  text-decoration: underline;
+  text-decoration-color: #e74c3c; }
+
+ul.specs li {
+  list-style: none; }
+
+/*# sourceMappingURL=paeroa.css.map */
