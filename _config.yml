@@ -1,8 +1,8 @@
-name: "Jekyll true minimal theme"
-description: "Lightweight theme"
+name: "Cameron's Notes"
+description: ""
 
 url: '' 
-baseurl: ''
+baseurl: 'http://t94xr.github.io/'
 
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -23,6 +23,6 @@ source: .
 destination: ./_site
 
 sass:
-    style: :compressed
+    style: compressed
     sass_dir: assets/css/
 
