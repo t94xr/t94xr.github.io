@@ -1,8 +1,8 @@
 name: "Cameron's Notes"
-description: ""
+description: "my \"dev blog\" or my place to for stuff not suitable for <a href=\"//cameronwalker.nz\">cameronwalker.nz</a>"
 
-url: '' 
-baseurl: 'http://t94xr.github.io/'
+url: ''
+baseurl: ''
 
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -26,3 +26,4 @@ sass:
     style: compressed
     sass_dir: assets/css/
 
+permalink: /:year-:month-:title
