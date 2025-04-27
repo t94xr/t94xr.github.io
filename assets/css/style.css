@@ -74,6 +74,7 @@ div.container {
 }
 section.index {
     padding: 20px;
+    line-height: 2em;
 }
 section.index span.post-date {
     min-width: 125px;
@@ -101,4 +102,20 @@ footer {
     font-size: 9pt;
     margin-top: 20px;
     border-top: 1px solid grey;
+}
+
+.post-tags {
+    margin-left: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+      
+.post-tags .tag {
+    background-color: #eee;
+    padding: 3px 5px 3px 5px;
+    margin: 0;
+    border-radius: 4px;
+    font-size: 7pt;
+    text-transform: uppercase;
+    vertical-align: middle;
 }

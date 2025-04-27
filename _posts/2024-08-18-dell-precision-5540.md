@@ -2,6 +2,7 @@
 layout: post
 title: "Dell Precision 5540 Mobile Workstation"
 date:   2024-08-19
+tags:   laptop dell info
 ---
 ![](https://cdn.mos.cms.futurecdn.net/RHnYjJvGD2V6U2Yijmap4b.jpg)
 

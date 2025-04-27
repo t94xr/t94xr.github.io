@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "L2TP/IPSec Issues within Windows 10/11"
-date: 2025-04-27
+date:   2025-04-27
+tags:   windows win11 vpn support
 ---
 
 I've been experiencing persistent issues establishing a functional L2TP/IPSec VPN connection at home. After thorough research, I discovered that modifying the Windows registry was necessary to enable proper operation.

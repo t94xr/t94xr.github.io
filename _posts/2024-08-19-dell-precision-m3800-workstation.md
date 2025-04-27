@@ -2,6 +2,7 @@
 layout: post
 title: "Dell Precision M3800 Workstation"
 date:   2024-08-19
+tags:   laptop dell info linux
 ---
 ![](https://blogs.windows.com/wp-content/uploads/sites/2/2014/01/M3800_2D00_left_2D00_side_2D00_closeup_2D00_1200_5F00_650696C7.jpg)
 
