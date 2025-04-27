@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        
+            HP Elitebook x360 1030 G2
+        
+    </title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    
+        <link rel='stylesheet' href='http://192.168.1.234:4000/assets/css/syntax.css' type='text/css'>
+    
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+    <h1>Cameron's Notes</h1>
+    <!--
+    <h1><a href='http://192.168.1.234:4000/'>Cameron's Notes</a></h1>
+    -->
+    <p>my "dev blog" or my place to for stuff not suitable for <a href="//cameronwalker.nz">cameronwalker.nz</a></p>
+</header>
+<nav>
+<a href='http://192.168.1.234:4000/'> Home</a> | 
+<!--
+<a href='http://192.168.1.234:4000/about/'>About </a> | 
+<a href='http://192.168.1.234:4000/contact/'> Contacts</a> | 
+-->
+<a href='http://192.168.1.234:4000/archive/'> Archive</a> 
+</nav>
+
+    <h1>HP Elitebook x360 1030 G2</h1>
+<div class='separator'></div>
+        
+<p><img src="https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/hp-elitebook-x360-1030-g2-laptop-complete-review-hero1552849686683.jpg" alt="" /></p>
+
+<h2 id="technical-specs">Technical Specs</h2>
+
+<ul>
+  <li><strong>Processor:</strong> Intel Core <a href="https://ark.intel.com/content/www/us/en/ark/products/97472/intel-core-i5-7300u-processor-3m-cache-up-to-3-50-ghz.html">i5-7300U</a> (Kaby Lake) 3M Cache, up to 3.50 GHz, 2C4T.</li>
+  <li><strong>Memory:</strong> 8GB DDR4-2133 soldered down</li>
+  <li><strong>Storage:</strong> 512G NVME SSD.</li>
+  <li><strong>Display:</strong> 1080p FHD Touchscreen</li>
+</ul>
+
+<h2 id="recommended-accessories">Recommended Accessories</h2>
+
+<ul>
+  <li><a href="https://www.hp.com/us-en/shop/pdp/hp-rechargeable-active-pen-g3">HP Rechargeable Active Pen G3</a> (6SG43AA)</li>
+</ul>
+
+<h2 id="documentation-drivers--support">Documentation, Drivers &amp; Support</h2>
+
+<ul>
+  <li><a href="https://support.hp.com/us-en/drivers/hp-elitebook-x360-1030-g2/14169372">Drivers &amp; Support</a></li>
+  <li><a href="https://h10032.www1.hp.com/ctg/Manual/c05386794.pdf">Maintenance and Service Guide</a></li>
+</ul>
+
+<h2 id="uefi-bios-upgrade">UEFI BIOS Upgrade</h2>
+
+<p>Download the updated firmware for the laptop from <a href="https://support.hp.com/us-en/drivers/hp-elitebook-x360-1030-g2/14169372">Drivers &amp; Support</a>, extract and place file on a USB stick, inside;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\EFI\HP\BIOS\New 
+</code></pre></div></div>
+
+<h2 id="operating-system-support">Operating System Support</h2>
+
+<h3 id="windows-11">Windows 11</h3>
+<p><img src="https://p2-ofp.static.pub/ShareResource/anz/img/microsoft/windows-11-sitelet-en.png" style="float:right;" /></p>
+
+<ul>
+  <li>UEFI &amp; Secure Boot Support</li>
+  <li>TPM 2.0 Support</li>
+  <li>Processor Unsupported <em>(Intel 8th Gen minimum required, officially.)</em></li>
+</ul>
+
+<p>Windows 11 can be installed, using a tweaked installer bypassing checks - Windows 11 does provide a fully functional OOBE, no issues.</p>
+
+<h3 id="linux">Linux</h3>
+<p><img src="https://fedoraproject.org/w/uploads/archive/3/3c/20110717031514%21Fedora_logo.png" style="float:right;max-width:100px;" /></p>
+
+<p>The power key is easy to hit by accident. If you use a desktop environment or window manager (such as awesome or qtile) without built-in power manager, pressing the power key will shutdown the computer. To avoid this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In        /etc/systemd/logind.conf
+change:   HandlePowerKey=poweroff
+to:       HandlePowerKey=suspend
+</code></pre></div></div>
+
+<h2 id="ex-lease--used-review">Ex-Lease / Used Review</h2>
+
+<p>These units are affordable, depending on condition you’re looking at <a href="https://www.ebay.com/sch/i.html?_from=R40&amp;_nkw=Elitebook+x360+1030+G2&amp;_sacat=0">$200-400</a> <em>USD</em>, with <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro">Windows 10 going out of support</a> in late 2025, these will leave the “supported” Windows scene, entering a life of potentially ewaste, if not still being useful as a system running Linux, giving it a second life.</p>
+
+<p>Disabling the Fingerprint Reader, NFC reader and SmartCard slot, this laptop is still a fully functional powerful system. Still being an ex-lease system, it may need a new SSD and/or battery which can be purchased fairly cheaply and both can installed relatively easily by most users with a basic screwdriver kit.</p>
+
+
+        
+
+
+
+
+<footer>
+    <p>Built with <a href="https://jekyllrb.com/">Jekyll</a></p>
+</footer>
+</div>
+</body>
+</html>

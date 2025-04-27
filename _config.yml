@@ -26,4 +26,4 @@ sass:
     style: compressed
     sass_dir: assets/css/
 
-permalink: /:year-:month-:title
+permalink: /:year-:title.html
