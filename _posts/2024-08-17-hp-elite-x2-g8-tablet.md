@@ -1,9 +1,8 @@
-+++
-author = ""
-title = "HP Elite x2 G8 Tablet (28R55AV)"
-date = "2024-08-07"
-description = ""
-+++
+---
+layout: post
+title:  "HP Elite x2 G8 Tablet (28R55AV)"
+date:   2024-08-07
+---
 
 ![](https://cdn.cs.1worldsync.com/syndication/feeds/hp/inline-content/AN/3/2/6/A/A/326AAC7FF21BEAC416B8CA011A1B10BCEE6348CA_i_fs_featurtn.jpg)
 
