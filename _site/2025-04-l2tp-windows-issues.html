@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        
+            L2TP/IPSec Issues within Windows 10/11
+        
+    </title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    
+        <link rel='stylesheet' href='http://192.168.1.234:4000/assets/css/syntax.css' type='text/css'>
+    
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+    <h1>Cameron's Notes</h1>
+    <!--
+    <h1><a href='http://192.168.1.234:4000/'>Cameron's Notes</a></h1>
+    -->
+    <p>my "dev blog" or my place to for stuff not suitable for <a href="//cameronwalker.nz">cameronwalker.nz</a></p>
+</header>
+<nav>
+<a href='http://192.168.1.234:4000/'> Home</a> | 
+<!--
+<a href='http://192.168.1.234:4000/about/'>About </a> | 
+<a href='http://192.168.1.234:4000/contact/'> Contacts</a> | 
+-->
+<a href='http://192.168.1.234:4000/archive/'> Archive</a> 
+</nav>
+
+    <h1>L2TP/IPSec Issues within Windows 10/11</h1>
+<div class='separator'></div>
+        
+<p>I’ve been experiencing persistent issues establishing a functional L2TP/IPSec VPN connection at home. After thorough research, I discovered that modifying the Windows registry was necessary to enable proper operation.</p>
+
+<ol>
+  <li><strong>Open Command Prompt as Administrator</strong>:
+    <ul>
+      <li>Press <code class="language-plaintext highlighter-rouge">Win + X</code> and select <code class="language-plaintext highlighter-rouge">Windows Terminal (Admin)</code> or <code class="language-plaintext highlighter-rouge">Command Prompt (Admin)</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Add Registry Entries</strong>:
+    <ul>
+      <li>Copy and paste the following commands into the Command Prompt and press <code class="language-plaintext highlighter-rouge">Enter</code> after each command:</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>PowerShell</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f
+REG ADD HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters /v ProhibitIpSec /t REG_DWORD /d 0x0 /f
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Restart Your Computer</strong>:
+    <ul>
+      <li>After executing the commands, restart your computer to apply the changes.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="explanation">Explanation</h3>
+
+<ol>
+  <li><strong>AssumeUDPEncapsulationContextOnSendRule</strong>:
+    <ul>
+      <li>This registry entry allows IPSec to work in a NAT (Network Address Translation) environment. Setting it to <code class="language-plaintext highlighter-rouge">0x2</code> enables IPSec to traverse NAT, which is essential for many home and small office networks.</li>
+    </ul>
+  </li>
+  <li><strong>ProhibitIpSec</strong>:
+    <ul>
+      <li>This registry entry ensures that IPSec is not prohibited, allowing L2TP/IPSec VPN to function correctly.</li>
+    </ul>
+  </li>
+</ol>
+
+        
+
+
+
+
+<footer>
+    <p>Built with <a href="https://jekyllrb.com/">Jekyll</a></p>
+</footer>
+</div>
+</body>
+</html>
