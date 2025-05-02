@@ -1,3 +1,13 @@
+PATH
+  remote: themes/devblog
+  specs:
+    devblog (0.1.0)
+
+PATH
+  remote: themes/mono
+  specs:
+    mono (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -139,7 +149,6 @@ PLATFORMS
   riscv64-linux-android
   riscv64-linux-gnu
   riscv64-linux-musl
-  ruby
   x86-linux
   x86-linux-gnu
   x86-linux-musl
@@ -150,8 +159,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.6)
+  devblog!
   jekyll (~> 4.4)
   jekyll-paginate
+  mono!
 
 BUNDLED WITH
    2.6.8

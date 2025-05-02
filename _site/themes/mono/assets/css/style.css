@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;500;600&display=swap');
+
+@import url('fonts.css');
+
+html {
+    background-color: #F0F0F0;
+    font-size: 11pt;
+    line-height: 1.75;
+    text-align: left;
+    color: #121212;
+    padding-top: 30px;
+}
+a { color: #000;}
+a:visited { color: #000;}
+a:hover { color: #EA4335;}
+img { max-width: 100%;}
+
+body {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.5px;
+    color: #121212;
+}
+
+h1, h2, h3 {
+    font-family: 'Cooper Hewitt Bold', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+header h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+header p {
+    color: #6c757d;
+    margin-top: 0;
+    font-style: italic;
+}
+nav {
+    background-color: #e9ecef;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+nav a:link, nav a:visited {
+    color: #000;
+    text-decoration: none;
+}
+nav a:hover {
+    font-weight: 700;
+}
+
+code, pre {
+    font-family: 'Victor Mono', monospace;
+}
+pre {
+    font-family: 'Victor Mono', monospace;
+    font-size: 10pt;
+    background-color: #343a40;
+    color: white;
+    padding: 25px;
+    line-height: 2em;
+    letter-spacing: 0;
+}
+
+div.container {
+    background-color: #fff;
+    margin: 0px auto;
+    max-width: 120ch;
+    padding: 20px 50px 20px 50px;
+    margin-bottom: 40px;
+
+}
+section.index {
+    padding: 20px;
+    line-height: 2em;
+}
+section.index span.post-date {
+    min-width: 125px;
+    display: none;
+
+}
+
+blockquote {
+    border-left: 5px solid #fb5607;
+    padding-left: 20px;
+
+}
+
+div.footnotes {
+    background-color: #f8f9fa;
+    padding: 5px; 
+    font-size: 10pt;
+    letter-spacing: -0.5px;
+    color: #343a40;
+}
+div.footnotes hr {
+    display: none;
+}
+footer {
+    font-size: 9pt;
+    margin-top: 20px;
+    border-top: 1px solid grey;
+}
+
+.post-tags {
+    margin-left: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+}
+      
+.post-tags .tag {
+    background-color: #fff;
+    border: 1px solid #212529;
+    padding: 3px 5px 3px 5px;
+    margin: 0;
+    border-radius: 4px;
+    font-size: 7pt;
+    text-transform: uppercase;
+    vertical-align: middle;
+}

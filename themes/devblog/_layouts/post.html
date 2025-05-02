@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<h1>{{ page.title }}{{ page.shortUrl }}</h1>
+<div class='separator'></div>
+        
+{{ content }}
+
+
+<!-- tags -->
+{% if page.tags %}
+<div class="post-tags">
+<!--  <strong>Tags:</strong> -->
+  {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/{{ tag | downcase | url_encode }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+</div>
+{% endif %}
+
+        
+{% if site.disqus-id %} {% include comments.html %} {% endif %}
+

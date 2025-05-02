@@ -1,0 +1,17 @@
+<!-- breadcrubs -->
+{% if page.layout == "post" %}
+  <p class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {% assign parts = page.url | split: '/' %}
+    {% assign path = "" %}
+    {% for part in parts %}
+      {% unless part == "" or part contains '.html' or part == 'posts' %}
+        {% assign path = path | append: '/' | append: part %}
+        / <a href="{{ path | relative_url }}">{{ part | replace:'-',' ' | capitalize }}</a>
+      {% endunless %}
+    {% endfor %}
+    / {{ page.title }}
+  </p>
+{% endif %}
+
+<!-- end breadcrubs -->

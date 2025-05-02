@@ -1,0 +1,72 @@
+@import url(https://normalizecss.org/normalize.css);
+@import url(https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css);
+
+
+@import url('fonts.css');
+  
+html {
+    font-family: 'Hubot Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+html {
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 450;
+    color: #222;
+    padding-top: 30px;
+  }
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mona Sans', sans-serif;
+}
+
+  h1 { font-size: 40.32px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em; }
+  h2 { font-size: 35.84px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em;}
+  h3 { font-size: 26.88px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em;}
+  h4 { font-size: 22.4px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em;}
+  h5 { font-size: 17.92px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em;}
+  h6 { font-size: 13.44px; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em;}
+  
+  
+
+article{
+    margin: 0 auto;
+    max-width: 120ch;
+    padding: 1rem;
+  }
+
+
+header {
+    padding: 20px;
+    
+}
+header > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    margin-top: 1em;
+    color: #333;
+  }
+div.content {
+    padding: 1em;
+}
+
+
+
+
+
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #1a73e8;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
