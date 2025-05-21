@@ -23,7 +23,11 @@ tags:   laptop dell info
 * **Power:**    
 * **Battery:**  
 
-**NOTE | Memory** - The memory is strict CL19 - system refuses to boot with any other modules with a lower CL rating.
+> [!IMPORTANT]
+>  
+> The memory is strict CL19 - system refuses to boot with any other modules with a lower CL rating.
+
+
  
 ## Upgrading Notes
 
