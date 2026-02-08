@@ -1,0 +1,562 @@
+@import url('https://fontlibrary.org/en/face/fantasque-sans-mono'); 
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap');
+
+
+/* --- Global Styles --- */
+* {
+  font-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif; /* Main font stack */
+  letter-spacing: -0.75px; /* Slight letter spacing for readability */
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+html {
+  max-width: 110ch; /* Max content width */
+  padding-left: 2%;
+  padding-right: 3%;
+  margin: 0 auto; /* Center content */
+  background-color: #f6f8fa; /* Light background color */
+}
+
+body {
+  padding-top: 20px; /* Space from top for potential fixed header */
+}
+
+/* --- General Element Styling --- */
+a {
+  color: black;
+  font-weight: 300;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+img {
+  border: 1px solid #000; /* Light border for images */
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* No rounded corners for images */
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 1.5em; /* Consistent paragraph spacing */
+}
+
+sup {
+  vertical-align: 0.3em;
+  font-size: 0.65em;
+}
+pre, code {
+  font-family: 'FantasqueSansMono', monospace; /* Monospaced font for code blocks */
+}
+pre {
+  background-color: #fff; /* Light background for code blocks */
+  border: 1px solid #e1e1e1; /* Lighter border for code blocks */
+  font-weight: 100; /* Regular weight for FantasqueSansMono */
+  padding: 1.5em; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners for code blocks */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  letter-spacing: 0; /* No extra letter spacing */;
+}
+pre.highlight {
+  padding: 0.5em; /* Padding for code blocks */
+} 
+pre code {
+  line-height: 1.75; /* Adjusted line height for readability */
+  padding: 0; /* No extra padding for code inside pre */
+}
+code {
+  background-color: #fff; /* Light background for inline code */
+  padding: 3px 5px; /* Consistent padding for inline code */
+  letter-spacing: 0; /* No extra letter spacing */;
+}
+
+/* --- Headings --- */
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: 'Helvetica Nue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14pt;
+  font-weight: bold; /* Standard bold for FantasqueSansMono bold variant */
+  /* text-transform: uppercase; User preference, can be enabled */
+  margin-top: 2em; /* Consistent top margin */
+  margin-bottom: 0.8em; /* Bottom margin for spacing */
+  padding-bottom: 0.3em; /* Spacing between text and border */
+}
+article h1,
+article h2,
+article h3 {
+  text-transform: uppercase; /* Uppercase for main headings */
+}
+article h1 {
+  font-size: 1.25rem;
+}
+article h2 {
+  font-size: 1.15rem;
+}
+article h3 {
+  font-size: 1rem;
+}
+article h4 {
+  font-size: 0.95rem;
+}
+section h3 {
+  margin-top: 1em;
+  font-weight: normal;
+  font-family: 'fantasqueSansMonoBold', monospace;
+}
+/* --- Responsive Font Size --- */
+@media (max-width: 500px) { /* For small screen devices */
+  * {
+    font-size: 16px; /* Adjusted base font size for small screens */
+  }
+  html {
+    max-width: 100%; /* Allow full width on small screens */
+  }
+}
+
+/* --- Utility Classes & Misc --- */
+.title { /* Assuming this is for a main site title or similar */
+  text-decoration: none;
+  color: inherit;
+}
+
+img.pixel, canvas.pixel {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+blockquote {
+  background-color: #FFF5E4;
+  border-left: 4px solid #FFA725; /* Prominent left border */
+  width: auto; /* Let it take the flow width, respecting parent padding */
+  text-align: justify;
+  padding: 1.5em; /* Consistent padding */
+  margin: 1.5em 0; /* Margins for blockquote */
+}
+
+blockquote div { /* Assuming this is for an attribution line */
+  text-transform: none;
+  text-align: right;
+  width: 100%;
+  font-size: 0.9em;
+  margin-top: 1em;
+}
+blockquote p {
+  margin-bottom: 0; /* No extra space after blockquote paragraphs */
+}
+blockquote cite {
+  font-style: normal; /* Normal style for citation */
+  color: #555; /* Slightly lighter color for citation */
+  text-align: right; /* Right align citation */
+  margin-top: 1em; /* Space above citation */
+  display: block; /* Make it a block element */
+}
+blockquote > blockquote {
+  margin-top: 1.5em; /* Space between nested blockquotes */
+  margin-bottom: 0; /* No extra space after nested blockquote */
+}
+del {
+  opacity: 0.3; /* Lighter text for deleted content */
+}
+p.breadcrumb {
+  font-size: 0.9em;
+  color: #666; /* Lighter color for breadcrumb */
+  margin-bottom: 1.5em; /* Space below breadcrumb */
+}
+/* --- Header Section --- */
+header {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 3ch; /* More space after header */
+}
+header h1 {
+  font-family: 'Helvetica Nue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin-bottom: -0.25ch;
+  text-transform: uppercase;
+  border-bottom: 0; /* Remove border if it's a site title */
+}
+header p { /* Subtitle or tagline */
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+header a { /* Links in header */
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+}
+
+p.post-date {
+  opacity: 0.7; /* Slightly faded text for post date */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h1.post-title {
+  font-family: 'Helvetica Nue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #e1e1e1; /* Lighter bottom border */
+  margin-top: 0.5em;
+  letter-spacing: -2px;
+}
+
+/* --- Task Lists --- */
+ul.task-list {
+  list-style: none;
+  padding-left: 0; /* Remove default padding */
+  margin-left: 3ch; /* Indent task list */
+}
+ul.task-list li {
+  margin-bottom: 0.5em;
+}
+ul.task-list input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle; /* Align checkbox with text */
+}
+ul li ul, ol li ol {
+  margin-top: 0em; /* Space between nested lists */
+  margin-bottom: 0em; /* Space below nested lists */
+}
+ol, ul {
+  margin-bottom: 1.5em; /* Consistent bottom margin for lists */
+  margin-left: 1.25em; /* Indent lists */}
+ol li, ul li {
+  line-height: 1.75em; /* Consistent line height for lists */
+}
+samp {
+  font-weight: 100; /* Regular weight for Victor Mono */
+  background-color: #000; /* Light background for sample text */
+  padding: 1.25em; /* Padding for sample text */
+  line-height: 1.4em; /* Line height for sample text */
+  border-radius: 4px; /* Rounded corners for sample text */
+  display: block; /* Inline block for samp elements */
+  margin-bottom: 1.5em; /* Space below sample text */
+  font-size: 0.95em; /* Slightly smaller font size for samp */
+  color: #fff; /* White text for better contrast */ 
+}
+/* --- Footer Section --- */
+footer {
+  border-top: 1px solid #e1e1e1; /* Lighter top border */
+  padding-top: 2ch; /* Padding for footer */
+  text-align: center;
+  margin-top: 3ch;
+  margin-bottom: 10ch; /* More space after footer */
+  font-size: 0.9em;
+  color: #555;
+}
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+footer a {
+  color: #6A9C89; /* Link color for footer */
+  font-size: 0.9rem;
+  text-decoration: none; /* No underline */
+}
+
+/* --- Footnotes --- */
+div.footnotes {
+  background-color: #f3f3f3; /* Consistent light background */
+  border-radius: 4px;
+  padding: 1.5em; /* Margin for footnotes section */
+  font-size:xx-small; /* Larger font size for footnotes */;
+  color: #121212;
+}
+div.footnotes hr {
+  display: none; /* Hide default HR if any */
+}
+div.footnotes ol {
+  padding-left: 20px; /* Indent footnote items */
+  opacity: 0.7; /* Slightly faded text for footnotes */
+}
+div.footnotes li p {
+  margin-bottom: 0; /* Consistent paragraph spacing */
+  font-weight:lighter;
+}
+div.footnotes li a {
+  font-weight: 600; /* Slightly bolder links in footnotes */
+}
+div.footnotes li a.reversefootnote {
+  font-weight: 600; /* Slightly bolder reverse footnote links */
+  color: #000; /* Link color for reverse footnotes */
+  font-size: small;
+}
+
+/* --- Table Styles --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2ch;
+  margin-bottom: 2ch;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for tables */
+  border-radius: 4px; /* Rounded corners for the table */
+  overflow: hidden; /* To make border-radius work on <th> */
+}
+
+caption {
+  caption-side: bottom;
+  text-align: left;
+  padding: 1ch 0.5ch; /* Adjusted padding */
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+}
+
+th, td {
+  border: 1px solid #e1e1e1; /* Lighter border */
+  padding: 0.85ch 1.2ch; /* Slightly more padding */
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f6f8fa; /* Match HTML background or slightly different */
+  font-weight: bold; /* FantasqueSansMono bold */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.05em; */
+}
+
+tbody tr:nth-child(odd), tbody tr:nth-child(even) {
+  background-color: #fcfdfe; /* Very subtle striping */
+}
+
+tbody tr:hover {
+  background-color: #f0f3f5; /* Slightly more noticeable hover */
+}
+
+/* Responsive wrapper for tables if needed */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+  margin-bottom: 1.5em;
+}
+
+/* --- Alert Styles --- */
+
+/* Optional: Add spacing for the main alert container */
+div.alert {
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+}
+
+/*
+  Styles for the inner element that defines the alert type.
+  This could be another div, a p, or a span.
+*/
+div.alert .info,
+div.alert .success,
+div.alert .warning,
+div.alert .error {
+  padding: 1em 1.5em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* Color definitions for each alert type */
+div.alert .info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+div.alert .success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+div.alert .warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+div.alert .error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+
+/* --- Alert Styles --- */
+
+/* Base class for all alerts containing shared layout styles */
+.alert {
+  width: 100%;
+  padding: 1em 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid transparent; /* Base border color */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Modifier classes for each alert type.
+  These are chained to the .alert class (e.g., .alert.info).
+  They override the base styles with specific colors.
+*/
+
+.alert.info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+
+/* --- Optional: Simplified styles for child elements within any alert --- */
+
+/* Style for strong/bold text */
+.alert strong {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+/* Style for headings */
+.alert h4 {
+  margin-top: 0;
+  color: inherit; /* Inherits color from the parent .alert.* class */
+  border-bottom: none;
+}
+
+/* Style for links */
+.alert a {
+  font-weight: bold;
+}
+
+figure figcaption {
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+div.index li a {
+  color: #007bff; /* Link color for index */
+  text-decoration: none; /* No underline */
+}
+.post-tags {
+  float: right;
+  opacity: 0.3; /* Slightly faded text for post tags */
+}
+.page-post-tags {
+  float: right;
+  opacity: 0.7; /* Slightly faded text for post tags */
+}
+
+/* Definition Lists */
+dl {
+  margin-bottom: 1.5em;
+}
+dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+dd {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+kbd {
+  background-color: #000; /* Light background for kbd */
+  color: #fff; /* White text for better contrast */
+  border: 1px solid #e1e1e1; /* Lighter border for kbd */
+  letter-spacing: 0.1em; /* Spacing for kbd */
+  font-weight: 600; /* Bold for kbd */
+  text-transform: uppercase; /* Uppercase for keyboard keys */
+
+  padding: 0.25em 0.5em; /* Padding for kbd */
+  border-radius: 5px; /* Rounded corners for kbd */
+  font-size: 0.9em; /* Slightly smaller font size for kbd */
+}
+
+iframe,
+video {
+  display: block;         /* Allows margin auto for centering */
+  width: 100%;            /* Makes it take the full width of its parent */
+  max-width: 800px;       /* Optional: Set a max width (e.g., for very wide screens). Adjust as needed. */
+  aspect-ratio: 16 / 9;   /* Maintains a 16:9 aspect ratio. Adjust if needed (e.g., 4 / 3) */
+  margin: 20px auto;      /* Adds 20px top/bottom spacing and centers it horizontally if width < parent width */
+  border: 0;              /* Removes default iframe border */
+  background-color: #000; /* Optional: A background color while the content loads */
+  object-fit: cover;      /* For <video>: ensures the video content covers the element's area.
+                             Use 'contain' if you prefer letterboxing over cropping. */
+  border-radius: 0.25rem; /* Optional: match input field rounding */
+}
+
+
+/* --- Details and Summary Styling --- */
+details {
+  display: block; /* Ensure it behaves as a block element */
+  background-color: #f9f9f9; /* Light background for the details block */
+  border: 1px solid #ced4da; /* Consistent border with inputs */
+  border-radius: 0.25rem;   /* Consistent border-radius */
+  padding: 25px;       /* Padding inside the details block */
+  margin-bottom: 15px;      /* Spacing below */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+summary {
+  display: block; /* Make summary take full width available for click */
+  font-weight: 600;       /* Make the summary text a bit bolder */
+  cursor: pointer;
+  padding: 5px 0;         /* Some padding around the summary text */
+  outline: none;          /* Remove default focus outline, manage with :focus-visible if needed */
+  transition: color 0.15s ease-in-out;
+}
+
+summary::-webkit-details-marker { /* For Chrome/Safari/Edge */
+  color: #007bff;
+}
+summary::marker { /* For Firefox */
+ color: #007bff;
+}
+
+details[open] > summary {
+  /* Optional: styles for when the details element is open */
+  margin-bottom: 15px; /* Add some space between summary and content when open */
+}
+
+details > *:not(summary) {
+  /* Styles for the content within details (excluding the summary) */
+  margin-top: 10px; /* Add some space above the content */
+  color: #495057; /* Consistent text color */
+}
