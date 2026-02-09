@@ -1,0 +1,49 @@
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %} 
+            {{ site.name }} &mdash; {{ site.description }}
+        {% endif %}
+    </title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+
+    {% if site.highlighter %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/google-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    {% endif %}
+
+<script>
+  window.CUSDIS_THEME = 'light';
+</script>
+
+</head>
+
+
+<body>
+<main>
+    {% include header.html %}
+<article>
+    {% include breadcrumbs.html %}
+    {{ content }}
+</article>
+
+<footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. 
+        All rights reserved.</p>
+        <!-- 
+        Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.
+        -->
+</footer>
+
+</main>
+</body>
+</html>
