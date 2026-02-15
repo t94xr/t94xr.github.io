@@ -4,4 +4,5 @@ layout: index
 
 I'm a geek from [Taupo, NZ](https://www.lovetaupo.com/en/). IT Professional & someone who seriously neglects this blog.
 
-I may post stuff from time to time, I dunno. 
+I may post stuff from time to time, I dunno. btw, check out <a href="//digitalbasement.cameronwalker.nz/">Digital Basement</a>
+
