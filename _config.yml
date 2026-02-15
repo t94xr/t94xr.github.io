@@ -11,4 +11,4 @@ github_username: "t94xr"
 plugins:
   - jekyll-feed
 
-permalink: /posts/:year-:slug/
+permalink: /posts-/:year-:slug/
